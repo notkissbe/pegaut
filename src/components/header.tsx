@@ -10,7 +10,7 @@ export default function Header() {
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="me-auto">
                         <NavDropdown title="Szolgáltatásaink" id="basic-nav-dropdown">
-                            <NavDropdown.Item href="#action/3.1">Autó vásárlás</NavDropdown.Item>
+                            <NavDropdown.Item href="#action/3.1">Autó vásárlás nem</NavDropdown.Item>
                             <NavDropdown.Item href="#action/3.1">Autó eladás</NavDropdown.Item>
                         </NavDropdown>
                         <Button variant="success">Hirdetésfeladás</Button>{' '}
