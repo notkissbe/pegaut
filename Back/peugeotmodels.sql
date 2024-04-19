@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Gép: 127.0.0.1
--- Létrehozás ideje: 2024. Ápr 19. 09:23
+-- Létrehozás ideje: 2024. Ápr 19. 10:15
 -- Kiszolgáló verziója: 10.4.25-MariaDB
 -- PHP verzió: 8.1.10
 
@@ -31,6 +31,7 @@ CREATE TABLE `peugeotmodels` (
   `Model` varchar(50) DEFAULT NULL,
   `Type` varchar(50) DEFAULT NULL,
   `Year` int(11) DEFAULT NULL,
+  `Price` int(11) NOT NULL,
   `EngineType` varchar(50) DEFAULT NULL,
   `RangeDistance` varchar(50) DEFAULT NULL,
   `kepLink` varchar(255) NOT NULL
@@ -40,29 +41,28 @@ CREATE TABLE `peugeotmodels` (
 -- A tábla adatainak kiíratása `peugeotmodels`
 --
 
-INSERT INTO `peugeotmodels` (`Model`, `Type`, `Year`, `EngineType`, `RangeDistance`, `kepLink`) VALUES
-('107', 'Hatchback', 2005, '1.0L Petrol', '450 km', ''),
-('206', 'Hatchback', 2005, '1.4L Diesel', '500 km', ''),
-('208', 'Hatchback', 2005, '1.6L Petrol', '550 km', ''),
-('301', 'Sedan', 2005, '1.6L Diesel', '600 km', ''),
-('308', 'Hatchback', 2005, '2.0L Petrol', '650 km', ''),
-('407', 'Sedan', 2010, '2.2L Petrol', '700 km', ''),
-('508', 'Wagon', 2010, '2.0L Petrol', '750 km', ''),
-('607', 'Sedan', 2010, '2.2L Petrol', '800 km', ''),
-('1007', 'Hatchback', 2005, '1.4L Petrol', '850 km', ''),
-('2008', 'SUV', 2013, '1.6L Petrol', '900 km', ''),
-('3008', 'SUV', 2005, '1.6L Diesel', '950 km', ''),
-('4007', 'SUV', 2005, '2.0L Petrol', '1000 km', ''),
-('5008', 'MPV', 2017, '1.6L Diesel', '1050 km', ''),
-('Partner', 'Van', 2005, '1.6L Petrol', '1100 km', ''),
-('Expert', 'Van', 2005, '1.6L Diesel', '1150 km', ''),
-('Boxer', 'Van', 2005, '2.0L Petrol', '1200 km', ''),
-('206 CC', 'Convertible', 2005, '1.6L Petrol', '1250 km', ''),
-('307 SW', 'Wagon', 2005, '2.0L Petrol', '1300 km', ''),
-('308 CC', 'Convertible', 2005, '2.0L Petrol', '1350 km', ''),
-('RCZ', 'Coupe', 2012, '1.6L Petrol', '1400 km', ''),
-('4008', 'SUV', 2015, '1.6L Petrol', '1450 km', ''),
-
+INSERT INTO `peugeotmodels` (`Model`, `Type`, `Year`, `Price`, `EngineType`, `RangeDistance`, `kepLink`) VALUES
+('107', 'Hatchback', 2005, 678000, '1.0L Petrol', '450 km', ''),
+('206', 'Hatchback', 2005, 987600, '1.4L Diesel', '500 km', ''),
+('208', 'Hatchback', 2005, 450000, '1.6L Petrol', '550 km', ''),
+('301', 'Sedan', 2005, 678000, '1.6L Diesel', '600 km', ''),
+('308', 'Hatchback', 2005, 300000, '2.0L Petrol', '650 km', ''),
+('407', 'Sedan', 2010, 123000, '2.2L Petrol', '700 km', ''),
+('508', 'Wagon', 2010, 934000, '2.0L Petrol', '750 km', ''),
+('607', 'Sedan', 2010, 477800, '2.2L Petrol', '800 km', ''),
+('1007', 'Hatchback', 2005, 546700, '1.4L Petrol', '850 km', ''),
+('2008', 'SUV', 2013, 980000, '1.6L Petrol', '900 km', ''),
+('3008', 'SUV', 2005, 435200, '1.6L Diesel', '950 km', ''),
+('4007', 'SUV', 2005, 129800, '2.0L Petrol', '1000 km', ''),
+('5008', 'MPV', 2017, 470000, '1.6L Diesel', '1050 km', ''),
+('Partner', 'Van', 2005, 683500, '1.6L Petrol', '1100 km', ''),
+('Expert', 'Van', 2005, 28400, '1.6L Diesel', '1150 km', ''),
+('Boxer', 'Van', 2005, 83700, '2.0L Petrol', '1200 km', ''),
+('206 CC', 'Convertible', 2005, 345000, '1.6L Petrol', '1250 km', ''),
+('307 SW', 'Wagon', 2005, 567000, '2.0L Petrol', '1300 km', ''),
+('308 CC', 'Convertible', 2005, 987600, '2.0L Petrol', '1350 km', ''),
+('RCZ', 'Coupe', 2012, 5647800, '1.6L Petrol', '1400 km', ''),
+('4008', 'SUV', 2015, 876500, '1.6L Petrol', '1450 km', '');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
