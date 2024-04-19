@@ -62,19 +62,7 @@ INSERT INTO `peugeotmodels` (`Model`, `Type`, `Year`, `EngineType`, `RangeDistan
 ('308 CC', 'Convertible', 2005, '2.0L Petrol', '1350 km', ''),
 ('RCZ', 'Coupe', 2012, '1.6L Petrol', '1400 km', ''),
 ('4008', 'SUV', 2015, '1.6L Petrol', '1450 km', ''),
-('508 SW', 'Wagon', 2010, '2.0L Petrol', '1500 km', ''),
-('Partner', 'Truck', 2005, '1.6L Petrol', '1550 km', ''),
-('Expert', 'Truck', 2005, '1.6L Diesel', '1600 km', ''),
-('Boxer', 'Truck', 2005, '2.0L Petrol', '1650 km', ''),
-('Bipper', 'Van', 2005, '1.4L Petrol', '1700 km', ''),
-('Partner Tepee', 'MPV', 2005, '1.6L Petrol', '1750 km', ''),
-('Expert Tepee', 'MPV', 2005, '1.6L Diesel', '1800 km', ''),
-('Boxer Van', 'Van', 2018, '2.0L Petrol', '1850 km', ''),
-('206 SW', 'Wagon', 2005, '1.4L Petrol', '1900 km', ''),
-('3008 HYbrid4', 'SUV', 2015, '2.0L Petrol', '1950 km', ''),
-('308 SW', 'Wagon', 2005, '2.0L Petrol', '2000 km', ''),
-('206 Van', 'Van', 2005, '1.4L Petrol', '2050 km', ''),
-('Partner Van', 'Van', 2005, '1.6L Petrol', '2100 km', '');
+
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
