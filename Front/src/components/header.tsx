@@ -5,7 +5,7 @@ export default function Header() {
         <header>
             <Navbar expand="lg" className="bg-white mx-auto">
             <Container className="mx-auto">
-                <Navbar.Brand href="#home">Használt Pegaut</Navbar.Brand>
+                <Navbar.Brand href="#home">Használt Pegaut <img src="pegot.png"></img></Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="me-auto">
