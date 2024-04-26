@@ -12,7 +12,7 @@ let jsonParser=bodyParser.json();
 
 const storage = multer.diskStorage({
     destination: function (req, file, cb){
-        cb(null, 'public/')
+        cb(null, 'kepek/')
     },
     filename: function (req, file, cb){
         const uniqueSuffix=Date.now() + '-' + Math.round(Math.random()*1E9)
@@ -30,7 +30,7 @@ const db=mysql.createPool({
 }).promise();
 
 app.use(cors());
-app.use(express.static('public'))
+app.use(express.static('kepek'))
 
 app.get('/', (req,res)=>{
     res.send("OK");
