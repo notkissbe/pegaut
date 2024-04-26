@@ -1,0 +1,11 @@
+#logo{
+    width: 40px;
+    rotate: 270deg;
+}
+#cimSzoveg{
+    font-style: italic;
+    font-weight: bold;
+}
+#basic-nav-dropdown{
+    color: gainsboro;
+}
