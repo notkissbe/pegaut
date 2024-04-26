@@ -13,6 +13,10 @@ export interface Kartya{
 
 export default function CreateCard(){
 
+    function load(){
+        
+    }
+
     return (
         <Card className='m-auto' style={{ width: '18rem' }}>
             <Card.Img variant='top' src='vite.svg'></Card.Img>
