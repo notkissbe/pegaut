@@ -1,7 +1,21 @@
 import {} from 'react';
 import { Button, Card } from 'react-bootstrap'
 
+export interface Kartya{
+    keplink:string;
+    Model:string;
+    Type:string;
+    Year:number;
+    Price:number;
+    EngineType:string;
+    RangeDistance:string;
+}
+
 export default function CreateCard(){
+
+    function load(){
+        
+    }
 
     return (
         <Card className='m-auto' style={{ width: '18rem' }}>
