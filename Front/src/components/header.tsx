@@ -21,14 +21,14 @@ export default function Header() {
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="me-auto">
-                        <NavDropdown title="Szolgáltatásaink" id="basic-nav-dropdown">
+                        <NavDropdown title="Szolgáltatásaink" id="basic-nav-dropdown" className="d-flex align-items-center">
                             <NavDropdown.Item href="#action/3.1">Autó vásárlás</NavDropdown.Item>
                             <NavDropdown.Item href="#action/3.1">Autó eladás</NavDropdown.Item>
                         </NavDropdown>
                         <Navbar.Brand>
                         <button onClick={onOpenModalClick} className="btn btn-outline-light btn-lg">Keresés</button>
                         </Navbar.Brand>
-                        <NavDropdown title="Szűrés" id="basic-nav-dropdown">
+                        <NavDropdown title="Szűrés" id="basic-nav-dropdown" className="d-flex align-items-center">
                             <NavDropdown.Item href="#action/3.1">Ár szerint csökkenő</NavDropdown.Item>
                             <NavDropdown.Item href="#action/3.1">Ár szerint növekvő</NavDropdown.Item>
                             <NavDropdown.Item href="#action/3.1">Km szerint csökkenő</NavDropdown.Item>
