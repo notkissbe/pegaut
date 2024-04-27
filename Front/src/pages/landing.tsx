@@ -18,7 +18,7 @@ export default function Landing() {
         <Container>
             <Row>
                 {
-                    models.map(oneModel => <CreateCard keplink={oneModel.keplink} Model={oneModel.Model} Type={oneModel.Type} Year={oneModel.Year} Price={oneModel.Price} EngineType={oneModel.EngineType} RangeDistance={oneModel.RangeDistance}/>)
+                    models.map(oneModel => <CreateCard kepLink={oneModel.kepLink} Model={oneModel.Model} Type={oneModel.Type} Year={oneModel.Year} Price={oneModel.Price} EngineType={oneModel.EngineType} RangeDistance={oneModel.RangeDistance}/>)
                 }
                             </Row>
         </Container>
