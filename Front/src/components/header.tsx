@@ -5,7 +5,6 @@ import React, {Fragment, useState} from "react";
 import  ReactDOM from "react-dom";
 import {Transition} from "react-transition-group";
 
-import ModalBackdrop from "./Searching/modal-backdrop";
 import Sidebar from "./Searching/sidebar";
 import "./Searching/styles.css";
 
@@ -27,29 +26,49 @@ export default function Header() {
                             <NavDropdown.Item href="#action/3.1">Autó eladás</NavDropdown.Item>
                         </NavDropdown>
                         <Navbar.Brand>
-                            <Fragment>
-                            <button onClick={onOpenModalClick}>Szűrés</button>
-                            <Transition in={isOpen} timeout={duration}>
-                                {(state: string) => (
-                                <ModalBackdrop duration={duration} state={state}>
-                                    <Sidebar duration={duration} state={state}>
-                                    {isOpen && (
-                                        <div>
-                                        <h2 id="szur">Szűrés</h2>
-                                        <button onClick={onCloseModalClick}>Bezárás</button>
-                                        </div>
-                                    )}
-                                    </Sidebar>
-                                </ModalBackdrop>
-                                )}
-                            </Transition>
-                            </Fragment>
+                        <button onClick={onOpenModalClick} className="btn btn-outline-light btn-lg">Keresés</button>
                         </Navbar.Brand>
+                        <NavDropdown title="Szűrés" id="basic-nav-dropdown">
+                            <NavDropdown.Item href="#action/3.1">Ár szerint csökkenő</NavDropdown.Item>
+                            <NavDropdown.Item href="#action/3.1">Ár szerint növekvő</NavDropdown.Item>
+                            <NavDropdown.Item href="#action/3.1">Km szerint csökkenő</NavDropdown.Item>
+                            <NavDropdown.Item href="#action/3.1">Km szerint növekvő</NavDropdown.Item>
+                            <NavDropdown.Item href="#action/3.1">Év szerint csökkenő</NavDropdown.Item>
+                            <NavDropdown.Item href="#action/3.1">Év szerint növekvő</NavDropdown.Item>
+                        </NavDropdown>
                         <Button variant="success" className="btn btn-danger">Hirdetésfeladás</Button>{' '}
                     </Nav>
                 </Navbar.Collapse>
             </Container>
-        </Navbar></header>
+        </Navbar>
+        <Fragment> 
+            <Transition in={isOpen} timeout={duration}>
+                {(state: string) => (
+                <Sidebar duration={duration} state={state}>
+                    {isOpen && (
+                        <div>
+                            <p></p>
+                            <h3>Model</h3>
+                            <input type="text" placeholder="Model"></input>
+                            <h3>Kivitel</h3>
+                            <input type="text" placeholder="Kivitel"></input>
+                            <h3>Évjárat</h3>
+                            <input type="number" min={1889} max={2024} placeholder="Évjárat"></input>
+                            <h3>Ár</h3>
+                            <input type="number" placeholder="Ár"></input>
+                            <h3>Motor</h3>
+                            <input type="text" placeholder="Motor"></input>
+                            <h3>Km</h3>
+                            <input type="number" placeholder="Km"></input>
+                            <p></p>
+                            <button onClick={onCloseModalClick} className="btn btn-dark">Bezárás</button>
+                            <p></p>
+                        </div>
+                    )}
+                </Sidebar>
+                )}
+            </Transition>
+        </Fragment></header>
     )
 
 

@@ -9,12 +9,12 @@ interface SidebarProps {
 const Sidebar: React.FC<SidebarProps> = ({ children, duration, state }) => {
   const defaultStyle: React.CSSProperties = {
     transition: `transform ${duration}ms ease-in-out`,
-    transform: "translateY(101%)"
+    transform: "translateY(20%)"
   };
 
   const transitionStyles: Record<SidebarProps["state"], React.CSSProperties> = {
-    entering: { transform: "translateY(10%)" },
-    entered: { transform: "translateY(0)" }
+    entering: { transform: "translateY(0%)" },
+    entered: { transform: "translateX(0)" }
   };
 
   return (
