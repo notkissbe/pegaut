@@ -11,12 +11,12 @@ export interface PeugeotModel{
     RangeDistance:string;
 }
 
-export default function CreateCard(){
+export default function CreateCard( props:PeugeotModel){
     return (
         <Card className='m-auto' style={{ width: '18rem' }}>
             <Card.Img variant='top' src='vite.svg'></Card.Img>
             <Card.Body>
-                <Card.Title>{'teszt'}</Card.Title>
+                <Card.Title>{props.Model}</Card.Title>
                 <Card.Text>{'lorem ipsum de pugot'}</Card.Text>
                 <Button variant='primary'>Megtekintés</Button>
             </Card.Body>

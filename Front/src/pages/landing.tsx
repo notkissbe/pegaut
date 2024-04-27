@@ -18,13 +18,9 @@ export default function Landing() {
         <Container>
             <Row>
                 {
-                    /*</Row>models.map(oneModel => <CreateCard ={oneModel as PeugeotModel}></CreateCard>)*/
+                    models.map(oneModel => <CreateCard keplink={oneModel.keplink} Model={oneModel.Model} Type={oneModel.Type} Year={oneModel.Year} Price={oneModel.Price} EngineType={oneModel.EngineType} RangeDistance={oneModel.RangeDistance}/>)
                 }
-
-                <CreateCard></CreateCard>
-                <CreateCard></CreateCard>
-                <CreateCard></CreateCard>
-            </Row>
+                            </Row>
         </Container>
     )
 }
