@@ -1,12 +1,3 @@
-  .modal-backdrop {
-    background: rgba(0, 0, 0, 0.6);
-    position: absolute;
-    left: 0;
-    top: 0;
-    height: 100%;
-    width: 100%;
-  }
-  
   .sidebar {
     background: #dc3545;
     width: 16.3%;
