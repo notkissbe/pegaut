@@ -8,59 +8,46 @@ export default function Feladas() {
         <InputGroup.Text id="basic-addon1">Modell</InputGroup.Text>
         <Form.Control
           placeholder="107, 206, 2008, ..."
-          aria-label="Username"
-          aria-describedby="basic-addon1"
         />
       </InputGroup>
 
       <InputGroup className="mb-3">
         <InputGroup.Text id="basic-addon1">Kivitel</InputGroup.Text>
         <Form.Control
-          placeholder="Kabrio"
-          aria-label="Recipient's username"
-          aria-describedby="basic-addon2"
+          placeholder="SW, CC, ..."
         />
       </InputGroup>
 
       <InputGroup className="mb-3">
-        <InputGroup.Text id="basic-addon1">Gyártási év</InputGroup.Text>
+        <InputGroup.Text id="basic-addon1">Évjárat</InputGroup.Text>
         <Form.Control
-          placeholder="2008"
-          aria-label="Recipient's username"
-          aria-describedby="basic-addon2"
+        placeholder='1889-2024'
         />
       </InputGroup>
 
       <InputGroup className="mb-3">
         <InputGroup.Text>Ár</InputGroup.Text>
-        <Form.Control aria-label="Amount (to the nearest dollar)" />
+        <Form.Control/>
         <InputGroup.Text>Forint</InputGroup.Text>
       </InputGroup>
 
       <InputGroup className="mb-3">
-        <InputGroup.Text>Hajtás</InputGroup.Text>
-        <Form.Control aria-label="Amount (to the nearest dollar)" />
+        <InputGroup.Text>Motor</InputGroup.Text>
+        <Form.Control/>
         <InputGroup.Text>Forint</InputGroup.Text>
       </InputGroup>
 
-      <Form.Label htmlFor="basic-url">Your vanity URL</Form.Label>
       <InputGroup className="mb-3">
-        <InputGroup.Text id="basic-addon3">
-          https://example.com/users/
-        </InputGroup.Text>
-        <Form.Control id="basic-url" aria-describedby="basic-addon3" />
+        <InputGroup.Text>Megtett távolság</InputGroup.Text>
+        <Form.Control/>
+        <InputGroup.Text>Km</InputGroup.Text>
       </InputGroup>
 
-      <InputGroup className="mb-3">
-        <InputGroup.Text>$</InputGroup.Text>
-        <Form.Control aria-label="Amount (to the nearest dollar)" />
-        <InputGroup.Text>.00</InputGroup.Text>
-      </InputGroup>
+      <Form.Group controlId="formFile" className="mb-3">
+        <Form.Label>Kép beillesztése</Form.Label>
+        <Form.Control type="file" />
+      </Form.Group>
 
-      <InputGroup>
-        <InputGroup.Text>With textarea</InputGroup.Text>
-        <Form.Control as="textarea" aria-label="With textarea" />
-      </InputGroup>
     </Container>)
 
 }

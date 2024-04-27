@@ -17,7 +17,7 @@ export default function Header() {
         <header>
             <Navbar expand="lg" className="bg-dark mx-auto">
             <Container className="mx-auto">
-                <Navbar.Brand href="#home" id="cimSzoveg" className="text-light">Használt <img id="logo" src="pegot.png"></img> Pegaut</Navbar.Brand>
+                <Navbar.Brand href="/" id="cimSzoveg" className="text-light">Használt <img id="logo" src="pegot.png"></img> Pegaut</Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="me-auto">
@@ -36,7 +36,7 @@ export default function Header() {
                             <NavDropdown.Item href="#action/3.1">Év szerint csökkenő</NavDropdown.Item>
                             <NavDropdown.Item href="#action/3.1">Év szerint növekvő</NavDropdown.Item>
                         </NavDropdown>
-                        <Button variant="success" className="btn btn-danger">Hirdetésfeladás</Button>{' '}
+                        <Button variant="success" className="btn btn-danger d-flex align-items-center" href="feladas">Hirdetésfeladás</Button>
                     </Nav>
                 </Navbar.Collapse>
             </Container>

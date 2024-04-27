@@ -13,8 +13,8 @@ const Sidebar: React.FC<SidebarProps> = ({ children, duration, state }) => {
   };
 
   const transitionStyles: Record<SidebarProps["state"], React.CSSProperties> = {
-    entering: { transform: "translateY(0%)" },
-    entered: { transform: "translateX(0)" }
+    entering: { transform: "translateY(0)" },
+    entered: { transform: "translateY(0)" }
   };
 
   return (
