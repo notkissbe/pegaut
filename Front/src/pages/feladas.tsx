@@ -47,7 +47,6 @@ export default function Feladas() {
         <Form.Label>Kép beillesztése</Form.Label>
         <Form.Control type="file" />
       </Form.Group>
-
     </Container>)
 
 }
