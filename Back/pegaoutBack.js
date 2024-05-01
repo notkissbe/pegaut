@@ -50,21 +50,20 @@ app.post('/upload', upload.single('image'),async (req,res,next)=>{
     let Price=req.body.Price;
     let EngineType=req.body.EngineType;
     let RangeDistance=req.body.RangeDistance;
-    let kepLink=req.body.kepLink;
-    let result = await db.query('SELECT Model, Type, Year, Price, EngineType, RangeDistance from peugeotmodels WHERE Model="${Model}", Type="${Type}", Year="${Year}", Price="${Price}", EngineType="${EngineType}", RangeDistance="${RangeDistance}",');
+    let kepLink=req.file.filename;
+    let result = await db.query(`SELECT Model, Type, Year, Price, EngineType, RangeDistance from peugeotmodels WHERE Model="${Model}" AND Type="${Type}" AND Year="${Year}" AND Price="${Price}" AND EngineType="${EngineType}" AND RangeDistance="${RangeDistance}"`);
     if(result[0].length==0){
         const temp=await db.query(
-            `INSERT INTO peugeotmodels (Model,Type,Year,Price,EngineType,RangeDistance)
-            VALUES ("${req.body.Model}","${req.body.Type}","${req.body.Year}","${req.body.Price}","${req.body.EngineType}","${req.body.RangeDistance}";)`)
+            `INSERT INTO peugeotmodels (Model,Type,Year,Price,EngineType,RangeDistance,kepLink) VALUES ("${Model}","${Type}","${Year}","${Price}","${EngineType}","${RangeDistance}","${kepLink}");`)
         res.sendStatus(200);
     }
     else{
-        res.sendStatus(400).send("Már létezik az adott példány")
+        res.status(409).send("Már létezik az adott példány")
     }
 })
 
-app.delete("/peugeotmodels/:Model/:Type/:Year/:Price/:EngineType/:RangeDistance",async(req,res)=>{
+/*app.delete("/peugeotmodels/:Model/:Type/:Year/:Price/:EngineType/:RangeDistance",async(req,res)=>{
     
-})
+})*/
 
 app.listen(3000);

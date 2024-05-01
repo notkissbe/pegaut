@@ -1,4 +1,4 @@
-import { Container, Form, InputGroup, Row } from 'react-bootstrap';
+import { Button, Container, Form, InputGroup, Row } from 'react-bootstrap';
 
 export default function Feladas() {
     return (
@@ -47,6 +47,8 @@ export default function Feladas() {
         <Form.Label>Kép beillesztése</Form.Label>
         <Form.Control type="file" />
       </Form.Group>
+
+      <Button variant='success' className='w-100'>Feladás</Button>
 
     </Container>)
 
