@@ -43,7 +43,6 @@ app.get('/peugeotmodels', async (req,res)=>{
     res.send(row)
 })
 app.get('/model/:id', async (req,res)=>{
-    console.log(req.id)
     const temp=await db.query(`SELECT Model, Type, Year, Price, EngineType, RangeDistance, kepLink FROM peugeotmodels WHERE id=${req.params.id}`)
     const row=temp[0];
     const fields=temp[1];
