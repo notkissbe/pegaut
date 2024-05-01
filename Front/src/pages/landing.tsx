@@ -20,7 +20,7 @@ export default function Landing() {
                 {
                     models.map(oneModel => <CreateCard kepLink={oneModel.kepLink} Model={oneModel.Model} Type={oneModel.Type} Year={oneModel.Year} Price={oneModel.Price} EngineType={oneModel.EngineType} RangeDistance={oneModel.RangeDistance}/>)
                 }
-                            </Row>
+            </Row>
         </Container>
     )
 }

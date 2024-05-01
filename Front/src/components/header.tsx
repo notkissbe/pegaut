@@ -3,9 +3,9 @@ import './header.css';
 import React, {Fragment, useState} from "react";
 import  ReactDOM from "react-dom";
 import {Transition} from "react-transition-group";
-
 import Sidebar from "./Searching/sidebar";
 import "./Searching/styles.css";
+import SortPriceD from "./sort"
 
 export default function Header() {
     const [isOpen, toggleIsOpen] = useState<boolean>(false);
@@ -28,7 +28,7 @@ export default function Header() {
                         <button onClick={onOpenModalClick} className="btn btn-outline-light btn-lg">Keresés</button>
                         </Navbar.Brand>
                         <NavDropdown title="Szűrés" id="basic-nav-dropdown" className="d-flex align-items-center">
-                            <NavDropdown.Item href="#action/3.1">Ár szerint csökkenő</NavDropdown.Item>
+                            <NavDropdown.Item /*onClick={SortPriceD}*/>Ár szerint csökkenő</NavDropdown.Item>
                             <NavDropdown.Item href="#action/3.1">Ár szerint növekvő</NavDropdown.Item>
                             <NavDropdown.Item href="#action/3.1">Km szerint csökkenő</NavDropdown.Item>
                             <NavDropdown.Item href="#action/3.1">Km szerint növekvő</NavDropdown.Item>
