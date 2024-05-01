@@ -14,7 +14,7 @@ export interface PeugeotModel{
 export default function CreateCard( props:PeugeotModel){
     return (
         <Card className='m-auto' style={{ width: '18rem' }}>
-            <Card.Img variant='top' src={`http://localhost:3000/${props.kepLink}`} style={{height: "15rem", objectFit: "cover", objectPosition: "100% 0"}}></Card.Img>
+            <Card.Img variant='top' src={`http://localhost:3000/${props.kepLink}`} style={{height: "15rem", objectFit: "fill"}}></Card.Img>
             <Card.Body>
                 <Card.Title>{props.Model}</Card.Title>
                 <Card.Text>{props.Price} Ft</Card.Text>
