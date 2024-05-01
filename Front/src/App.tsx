@@ -18,7 +18,7 @@ export default function App() {
         <Route path="/" element={<Layout />}>
           <Route index element={<Landing />}></Route>
           <Route path="feladas" element={<Feladas />}></Route>
-          <Route path="megtekint" element={<Megtekint kepLink={""} Model={""} Type={""} Year={0} Price={0} EngineType={""} RangeDistance={""} />}></Route>
+          <Route path="megtekint/:id" element={<Megtekint/>}></Route>
         </Route>
       </Routes>
     </BrowserRouter>
