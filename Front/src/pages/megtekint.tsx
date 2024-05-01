@@ -28,7 +28,7 @@ export default function Megtekint(id:number) {
                 <ListGroup.Item>{model!.RangeDistance}</ListGroup.Item>
             </ListGroup>
             <Card.Body>
-                <Button variant='danger'>Feltöltés</Button>
+                <Button variant='danger'>Vásárlás</Button>
             </Card.Body>
         </Card>
     )

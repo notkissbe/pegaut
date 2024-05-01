@@ -42,6 +42,13 @@ app.get('/peugeotmodels', async (req,res)=>{
     const fields=temp[1];
     res.send(row)
 })
+app.get('/model/:id', async (req,res)=>{
+    console.log(req.id)
+    const temp=await db.query(`SELECT Model, Type, Year, Price, EngineType, RangeDistance, kepLink FROM peugeotmodels WHERE id=${req.params.id}`)
+    const row=temp[0];
+    const fields=temp[1];
+    res.send(row)
+})
 
 app.post('/upload', upload.single('image'),async (req,res,next)=>{
     let Model=req.body.Model;
