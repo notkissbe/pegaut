@@ -2,6 +2,7 @@ import {} from 'react';
 import { Button, Card } from 'react-bootstrap'
 
 export interface PeugeotModel{
+    id: number;
     kepLink:string;
     Model:string;
     Type:string;
@@ -18,6 +19,7 @@ export default function CreateCard( props:PeugeotModel){
             <Card.Body>
                 <Card.Title>{props.Model}</Card.Title>
                 <Card.Text>{props.Price} Ft</Card.Text>
+                <Card.Text hidden id='itemId'>33</Card.Text>
                 <Button variant='light' href="megtekint" className='btn-outline-danger'>Megtekintés</Button>
             </Card.Body>
         </Card>
