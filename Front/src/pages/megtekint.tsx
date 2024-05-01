@@ -18,7 +18,7 @@ export default function Megtekint(props:PeugeotModel) {
                 <ListGroup.Item>{props.RangeDistance}</ListGroup.Item>
             </ListGroup>
             <Card.Body>
-                <Button variant='danger'>Feltöltés</Button>
+                <Button variant='danger'>Vásárlás</Button>
             </Card.Body>
         </Card>
     )
