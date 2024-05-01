@@ -28,7 +28,7 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `peugeotmodels` (
-  `id` int NOT NULL AUTO_INCREMENT,
+  `id` int NOT NULL AUTO_INCREMENT PRIMARY KEY,
   `Model` varchar(50) DEFAULT NULL,
   `Type` varchar(50) DEFAULT NULL,
   `Year` int(11) DEFAULT NULL,
