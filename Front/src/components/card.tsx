@@ -18,7 +18,7 @@ export default function CreateCard( props:PeugeotModel){
             <Card.Body>
                 <Card.Title>{props.Model}</Card.Title>
                 <Card.Text>{props.Price} Ft</Card.Text>
-                <Button variant='primary'>Megtekintés</Button>
+                <Button variant='light' href="megtekint" className='btn-outline-danger'>Megtekintés</Button>
             </Card.Body>
         </Card>
     )

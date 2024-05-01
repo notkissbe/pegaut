@@ -1,6 +1,5 @@
 import { Button, Container, Nav, NavDropdown, Navbar } from "react-bootstrap";
 import './header.css';
-/*import { Search } from "./search";*/
 import React, {Fragment, useState} from "react";
 import  ReactDOM from "react-dom";
 import {Transition} from "react-transition-group";
