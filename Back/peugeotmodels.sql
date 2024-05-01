@@ -28,6 +28,7 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `peugeotmodels` (
+  `id` int NOT NULL AUTO_INCREMENT,
   `Model` varchar(50) DEFAULT NULL,
   `Type` varchar(50) DEFAULT NULL,
   `Year` int(11) DEFAULT NULL,
@@ -41,7 +42,7 @@ CREATE TABLE `peugeotmodels` (
 -- A tábla adatainak kiíratása `peugeotmodels`
 --
 
-INSERT INTO `peugeotmodels` (`Model`, `Type`, `Year`, `Price`, `EngineType`, `RangeDistance`, `kepLink`) VALUES
+INSERT INTO `peugeotmodels` (`id`, `Model`, `Type`, `Year`, `Price`, `EngineType`, `RangeDistance`, `kepLink`) VALUES
 ('107', 'Hatchback', 2005, 678000, '1.0L Petrol', '450 km', '107Ha.jpg'),
 ('206', 'Hatchback', 2005, 987600, '1.4L Diesel', '500 km', '206Ha.jpg'),
 ('208', 'Hatchback', 2005, 450000, '1.6L Petrol', '550 km', '208Ha.webp'),
