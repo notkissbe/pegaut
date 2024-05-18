@@ -37,13 +37,13 @@ app.get('/', (req,res)=>{
 });
 
 app.get('/peugeotmodels', async (req,res)=>{
-    const temp=await db.query('SELECT Model, Type, Year, Price, EngineType, RangeDistance, kepLink FROM peugeotmodels')
+    const temp=await db.query('SELECT Model, Type, Year, Price, EngineType, RangeDistance, kepLink, id FROM peugeotmodels')
     const row=temp[0];
     const fields=temp[1];
     res.send(row)
 })
 app.get('/model/:id', async (req,res)=>{
-    const temp=await db.query(`SELECT Model, Type, Year, Price, EngineType, RangeDistance, kepLink FROM peugeotmodels WHERE id=${req.params.id}`)
+    const temp=await db.query(`SELECT Model, Type, Year, Price, EngineType, RangeDistance, kepLink, id FROM peugeotmodels WHERE id=${req.params.id}`)
     const row=temp[0];
     const fields=temp[1];
     res.send(row)

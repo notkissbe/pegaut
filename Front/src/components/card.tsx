@@ -13,6 +13,7 @@ export interface PeugeotModel{
 }
 
 export default function CreateCard( props:PeugeotModel){
+    console.log(props.id)
     return (
         <Card className='m-auto' style={{ width: '18rem' }}>
             <Card.Img variant='top' src={`http://localhost:3000/${props.kepLink}`} style={{height: "11rem", objectFit: "cover"}}></Card.Img>
@@ -20,7 +21,7 @@ export default function CreateCard( props:PeugeotModel){
                 <Card.Title>{props.Model}</Card.Title>
                 <Card.Text>{props.Price} Ft</Card.Text>
                 <Card.Text hidden id='itemId'>33</Card.Text>
-                <Button variant='light' href={`megtekint/1`} className='btn-outline-danger'>Megtekintés</Button>
+                <Button variant='light' href={`megtekint/${props.id}`} className='btn-outline-danger'>Megtekintés</Button>
             </Card.Body>
         </Card>
     )
