@@ -14,7 +14,7 @@ export default function Header() {
     const duration: number = 250;
     return (
         <header>
-            <Navbar expand="lg" className="bg-dark mx-auto">
+            <Navbar expand="lg" className="navbar-dark bg-dark mx-auto">
             <Container className="mx-auto">
                 <Navbar.Brand href="/" id="cimSzoveg" className="text-light">Használt <img id="logo" src="pegot.png"></img> Pegaut</Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -25,8 +25,8 @@ export default function Header() {
                             <NavDropdown.Item href="#action/3.1">Autó eladás</NavDropdown.Item>
                         </NavDropdown>
                         <Navbar.Brand>
-                        <button onClick={onOpenModalClick} className="btn btn-outline-light btn-lg">Keresés</button>
-                        </Navbar.Brand>
+                        <Button onClick={onOpenModalClick} variant="dark" className="btn-outline-light">Keresés</Button>
+                        </Navbar.Brand> 
                         <NavDropdown title="Szűrés" id="basic-nav-dropdown" className="d-flex align-items-center">
                             <NavDropdown.Item /*onClick={SortPriceD}*/>Ár szerint csökkenő</NavDropdown.Item>
                             <NavDropdown.Item href="#action/3.1">Ár szerint növekvő</NavDropdown.Item>
@@ -35,7 +35,7 @@ export default function Header() {
                             <NavDropdown.Item href="#action/3.1">Év szerint csökkenő</NavDropdown.Item>
                             <NavDropdown.Item href="#action/3.1">Év szerint növekvő</NavDropdown.Item>
                         </NavDropdown>
-                        <Button variant="success" className="btn btn-danger d-flex align-items-center" href="feladas">Hirdetésfeladás</Button>
+                        <Button variant="danger" className="d-flex align-items-center " href="feladas">Hirdetésfeladás</Button>
                     </Nav>
                 </Navbar.Collapse>
             </Container>
