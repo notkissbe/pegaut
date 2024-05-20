@@ -27,10 +27,6 @@ export default function Header() {
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="me-auto">
-                        <NavDropdown title="Szolgáltatásaink" id="basic-nav-dropdown" className="d-flex align-items-center">
-                            <NavDropdown.Item href="#action/3.1">Autó vásárlás</NavDropdown.Item>
-                            <NavDropdown.Item href="#action/3.1">Autó eladás</NavDropdown.Item>
-                        </NavDropdown>
                         <Navbar.Brand>
                         <Button onClick={onOpenModalClick} variant="dark" className="btn-outline-light">Keresés</Button>
                         </Navbar.Brand> 
