@@ -3,7 +3,6 @@ import './header.css';
 import React, {Fragment, useState} from "react";
 import  ReactDOM from "react-dom";
 import {Transition} from "react-transition-group";
-import "./Searching/styles.css";
 
 export default function Header() {
     
@@ -17,17 +16,17 @@ export default function Header() {
             <Container className="mx-auto">
                 <Navbar.Brand href="/" id="cimSzoveg" className="text-light">Használt <img id="logo" src="../pegot.png"></img> Pegaut</Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
-                <Navbar.Collapse id="basic-navbar-nav">
-                    <Nav className="me-auto"> 
-                        <NavDropdown title="Rendezés" id="basic-nav-dropdown" className="d-flex align-items-center">
+                <Button variant="danger" href="feladas" className="fs-5 fw-bold">Hirdetésfeladás</Button>
+                <Navbar.Collapse id="basic-navbar-nav" className="justify-content-end">
+                    <Nav> 
+                    <NavDropdown title="Rendezés" id="basic-nav-dropdown" className="btn btn-outline-danger">
                             <NavDropdown.Item onClick={()=>{HandleSortSelection("ArC")}}>Ár szerint csökkenő</NavDropdown.Item>
                             <NavDropdown.Item onClick={()=>{HandleSortSelection("ArN")}}>Ár szerint növekvő</NavDropdown.Item>
                             <NavDropdown.Item onClick={()=>{HandleSortSelection("KmC")}}>Km szerint csökkenő</NavDropdown.Item>
                             <NavDropdown.Item onClick={()=>{HandleSortSelection("KmN")}}>Km szerint növekvő</NavDropdown.Item>
                             <NavDropdown.Item onClick={()=>{HandleSortSelection("EvC")}}>Év szerint csökkenő</NavDropdown.Item>
                             <NavDropdown.Item onClick={()=>{HandleSortSelection("EvN")}}>Év szerint növekvő</NavDropdown.Item>
-                        </NavDropdown>
-                        <Button variant="danger" className="d-flex align-items-center " href="feladas">Hirdetésfeladás</Button>
+                    </NavDropdown>
                     </Nav>
                 </Navbar.Collapse>
             </Container>
