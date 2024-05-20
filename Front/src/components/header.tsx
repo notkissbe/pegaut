@@ -12,6 +12,13 @@ export default function Header() {
     const onOpenModalClick = () => toggleIsOpen(true);
     const onCloseModalClick = () => toggleIsOpen(false);
     const duration: number = 250;
+
+
+    
+    function HandleSortSelection(mod:string){
+        localStorage.setItem('SortBy',JSON.stringify(mod));
+        window.dispatchEvent(new Event("storage"));
+    }
     return (
         <header>
             <Navbar expand="lg" className="navbar-dark bg-dark mx-auto">
@@ -27,13 +34,13 @@ export default function Header() {
                         <Navbar.Brand>
                         <Button onClick={onOpenModalClick} variant="dark" className="btn-outline-light">Keresés</Button>
                         </Navbar.Brand> 
-                        <NavDropdown title="Szűrés" id="basic-nav-dropdown" className="d-flex align-items-center">
-                            <NavDropdown.Item /*onClick={SortPriceD}*/>Ár szerint csökkenő</NavDropdown.Item>
-                            <NavDropdown.Item href="#action/3.1">Ár szerint növekvő</NavDropdown.Item>
-                            <NavDropdown.Item href="#action/3.1">Km szerint csökkenő</NavDropdown.Item>
-                            <NavDropdown.Item href="#action/3.1">Km szerint növekvő</NavDropdown.Item>
-                            <NavDropdown.Item href="#action/3.1">Év szerint csökkenő</NavDropdown.Item>
-                            <NavDropdown.Item href="#action/3.1">Év szerint növekvő</NavDropdown.Item>
+                        <NavDropdown title="Rendezés" id="basic-nav-dropdown" className="d-flex align-items-center">
+                            <NavDropdown.Item onClick={()=>{HandleSortSelection("ArC")}}>Ár szerint csökkenő</NavDropdown.Item>
+                            <NavDropdown.Item onClick={()=>{HandleSortSelection("ArN")}}>Ár szerint növekvő</NavDropdown.Item>
+                            <NavDropdown.Item onClick={()=>{HandleSortSelection("KmC")}}>Km szerint csökkenő</NavDropdown.Item>
+                            <NavDropdown.Item onClick={()=>{HandleSortSelection("KmN")}}>Km szerint növekvő</NavDropdown.Item>
+                            <NavDropdown.Item onClick={()=>{HandleSortSelection("EvC")}}>Év szerint csökkenő</NavDropdown.Item>
+                            <NavDropdown.Item onClick={()=>{HandleSortSelection("EvN")}}>Év szerint növekvő</NavDropdown.Item>
                         </NavDropdown>
                         <Button variant="danger" className="d-flex align-items-center " href="feladas">Hirdetésfeladás</Button>
                     </Nav>
