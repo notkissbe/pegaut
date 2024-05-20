@@ -1,60 +1,48 @@
 import { Container, Row } from 'react-bootstrap';
 import CreateCard from '../components/card';
 import { PeugeotModel } from '../components/card';
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useState } from 'react';
 
-export default function Landing() {
+export default function Landing({ term }: { term: string }) {
 
     const [models, setModels] = useState([] as PeugeotModel[]);
-    const [filter, setFilter] = useState("");
+
     const [sorted, setSorted] = useState([] as PeugeotModel[]);
-    
+    let searchterm = term;
     //valamiert folyamatosan fut -- console.log(JSON.parse(localStorage.getItem('SortBy')!))
 
-   
 
-    window.addEventListener('storage', ()=>{
-        setFilter(JSON.parse(localStorage.getItem('SortBy')!))
-    })
+    useEffect(() => {
+        async function load() {
+            let eredmeny = await fetch("http://localhost:3000/peugeotmodels");
+            let Models: PeugeotModel[] = await eredmeny.json();
 
-    useEffect(()=>{
-        if (filter == "ArC"){
-            setSorted(models.sort((a,b)=> a.Price-b.Price))
+            if (term == "ArC") {
+                setSorted(Models.sort((a, b) => b.Price - a.Price))
+            }
+            else if (term == "ArN") {
+                setSorted(Models.sort((a, b) => a.Price - b.Price))
+            }
+            else if (term == "KmC") {
+                setSorted(Models.sort((a, b) => parseInt(b.RangeDistance) - parseInt(a.RangeDistance)))
+            }
+            else if (term == "KmN") {
+                setSorted(Models.sort((a, b) => parseInt(b.RangeDistance) - parseInt(a.RangeDistance)))
+            }
+            else if (term == "EvC") {
+                setSorted(Models.sort((a, b) => b.Year - a.Year))
+            }
+            else if (term == "EvN") {
+                setSorted(Models.sort((a, b) => b.Year - a.Year))
+            }
+            else {
+                setSorted(Models)
+            }
         }
-        else if(filter == "ArN"){  
-            setSorted(models.sort((a,b)=> b.Price-a.Price))
-        }
-        else if (filter == "KmC"){
-            setSorted(models.sort((a,b)=> parseInt(a.RangeDistance)-parseInt(b.RangeDistance)))
-        }
-        else if (filter == "KmN"){
-            setSorted(models.sort((a,b)=> parseInt(a.RangeDistance)-parseInt(b.RangeDistance)))
-        }
-        else if (filter == "EvC"){
-            setSorted(models.sort((a,b)=> a.Year-b.Year))
-        }
-        else if (filter == "EvN"){
-            setSorted(models.sort((a,b)=> a.Year-b.Year))
-        }
-        else{
-            setSorted(models)
-        }
-
-    },[filter])
-
-
-
-    useEffect(()=>{
         load();
-        setSorted(models)
-        
-    },[])
-    async function load() {
-        let eredmeny = await fetch("http://localhost:3000/peugeotmodels");
-        let Models: PeugeotModel[] = await eredmeny.json();
-        setModels(Models);
-        setSorted(models);
-    }
+    }, [term])
+
+
 
     function HandleFetchError() {
         //fetchhez kene irni hibakezelest hozza, de nem prioritas
