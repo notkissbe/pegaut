@@ -89,7 +89,7 @@ export default function Feladas() {
         <InputGroup className="mb-3">
           <InputGroup.Text >Motor</InputGroup.Text>
           <Form.Control id='EngineType' />
-          <InputGroup.Text>Forint</InputGroup.Text>
+          <InputGroup.Text>cm<sup>3</sup> - benzin/dízel</InputGroup.Text>
         </InputGroup>
 
         <InputGroup className="mb-3">
