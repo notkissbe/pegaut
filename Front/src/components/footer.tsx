@@ -3,7 +3,7 @@ import {} from 'react-bootstrap';
 export default function Footer(){
     return (
         <footer>
-            <p>made by hmm</p>
+            <p>Made by Pezso206CC</p>
         </footer>
     )
 }
